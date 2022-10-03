@@ -15,14 +15,14 @@
         }
 
         .bg {
-            display: block;
+            /* display: block; */
             width: 100vw;
             height: 100vh;
             background-color: grey;
         }
 
         p {
-            /* display: none; */
+            position: fixed;
             width: 100vw;
             color: white;
             font-family: arial;
@@ -30,6 +30,8 @@
             text-transform: uppercase;
             text-align: center;
             line-height: 100vh;
+            margin: 0 auto;
+            z-index: -1;
         }
 
         .circle {
@@ -37,11 +39,11 @@
             width: 40px;
             height: 40px;
             position: absolute;
-            border: 4px solid black;
+            border: 4px solid white;
             border-radius: 50%;
         }
 
-        div.green, circle {
+        div.green {
             top: 20px;
             right: 20px;
             background-color: green;
@@ -49,25 +51,22 @@
 
         .circle:hover {
             cursor: pointer;
-        }
-        
-        .circle:hover p {
-            display: inline;
+            border-color: aqua;
         }
 
-        div.red , circle{
+        div.red {
             top: 20px;
             left: 20px;
             background-color: red;
         }
 
-         div.blue, circle{
+         div.blue {
             bottom: 20px;
             left: 20px;
             background-color: blue;
         }
 
-        div.orange, circle {
+        div.orange {
             bottom: 20px;
             right: 20px;
             background-color: orange;
