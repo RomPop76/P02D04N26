@@ -43,26 +43,49 @@
             border-radius: 50%;
         }
 
+        .circle:hover {
+            cursor: pointer;
+        }
+
         div.green {
             top: 20px;
             right: 20px;
             background-color: green;
         }
 
-        .circle:hover {
-            cursor: pointer;
-            border-color: aqua;
+        div.green:hover ~ .bg{
+            background-color: green;
+        }
+
+        div.green:hover ~ .bg > p.green{
+            z-index: 1;
         }
 
         div.red {
             top: 20px;
             left: 20px;
             background-color: red;
+            transition: .5s;
         }
 
+        div.red:hover ~ .bg{
+            background-color: red;
+        }
+
+        div.red:hover ~ .bg > p.red{
+            z-index: 1;
+        }
          div.blue {
             bottom: 20px;
             left: 20px;
+            background-color: blue;
+        }
+
+        div.blue:hover ~ .bg > p.blue{
+            z-index: 1;
+        }
+
+        div.blue:hover ~ .bg{
             background-color: blue;
         }
 
@@ -71,6 +94,13 @@
             right: 20px;
             background-color: orange;
         }
+
+        div.orange:hover ~ .bg{
+            background-color: orange;
+        }
+
+        div.orange:hover ~ .bg > p.orange{
+            z-index: 1;
     </style>
 </head>
 
